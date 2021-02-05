@@ -1,7 +1,10 @@
 name: gitHubActionsTest
 
 # Run this workflow every time a new commit pushed to your repository
-on: push
+on: 
+  push:
+    branches: 
+      - master      -
 
 jobs:
   # Set the job key. The key is displayed as the job name
@@ -15,11 +18,11 @@ jobs:
     steps:
       # Checks out a copy of your repository on the ubuntu-latest machine
       - name: gitHubActionsTest Checkout code
-        uses: actions/gitHubActionsTest@master
+        uses: actions/checkout@v2
 
       #
       - name: Run gitHubActionsTest
-        uses: actions/gitHubActionsTest@master
+        uses: actions/checkout@v2
         env:
-          DEFAULT_BRANCH: main
+          DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
