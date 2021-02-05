@@ -4,7 +4,7 @@ name: gitHubActionsTest
 on: 
   push:
     branches: 
-      - master      -
+      - master
 
 jobs:
   # Set the job key. The key is displayed as the job name
